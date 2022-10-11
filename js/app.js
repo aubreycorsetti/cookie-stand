@@ -14,7 +14,7 @@ let seattle = {
   sDailyTotal: 0,
   cookiesSoldPerHourArray: [],
   getRandomCustomers: function () {
-    return Math.round(Math.random() * (this.max - this.min + 1) + this.min);
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
   }
 };
 
