@@ -80,6 +80,7 @@ Cookie.prototype.renderTable = function () {
 
 function renderFooter() {
   let tr = document.createElement('tr');
+  tr.id= 'footerRow';
   cookieFoot.appendChild(tr);
   let tdName = document.createElement('td');
   tdName.textContent = 'Totals';
@@ -146,5 +147,27 @@ let lima = new Cookie(
 );
 lima.renderTable();
 
+
+
 renderFooter();
 
+let form = document.querySelector(`form`);
+console.log(form);
+
+let handleSubmit = function(event) {
+  event.preventDefault();
+  document.getElementById('footerRow').remove();
+  console.log('the form submitted');
+  let name= event.target.location.value;
+  let min = parseInt(event.target.min.value);
+  let max = parseInt(event.target.max.value);
+  let avg = parseInt(event.target.avg.value);
+
+  let newStore = new Cookie(name, min, max,avg);
+  console.log(newStore);
+  newStore.renderTable();
+  renderFooter();
+
+};
+
+form.addEventListener('submit', handleSubmit);

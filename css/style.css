@@ -24,6 +24,10 @@ a {
   color: lightgray;
 }
 
+a:hover {
+  color: salmon;
+}
+
 header nav img {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -65,6 +69,7 @@ div {
   border: 5px solid black;
   color: white;
   padding: 5px;
+  margin-top: 1rem;
   
 }
 
@@ -74,11 +79,11 @@ th {
 
 body h2 {
   font-size: 45px;
-  border: solid darkgray;
+  border: solid darkslategray;
   border-width: 25px;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-  color: #8aa192;
+  color: darkslategrey;
 }
 section table, th, td {
   border:1px solid black;
@@ -90,16 +95,56 @@ section table, th, td {
   flex-wrap: wrap;
 }
 
+body {
+  background-color:  #92d8ab;
+}
+
 h3 {
-  color: #f2b3a4;
+  color: #d03f1a;
+  font-weight: 600;
   font-family: 'Secular One', sans-serif;
+  text-align: center;
+  align-items: center;
 }
 
 h4 {
   font-size: 45px;
-  border: solid darkgray;
+  border: solid darkslategray;
   border-width: 25px;
   text-align: center;
-  color: #bfb4ae;
+  color: #c96b38;
   font-family: 'Acme', sans-serif;
+}
+
+form {
+  width: auto;
+  margin-top: 2rem;
+}
+
+fieldset {
+  border: 1px solid olive;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  color: red;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+textarea,
+label,
+input {
+  display: block;
+}
+
+textarea,
+input {
+  margin-bottom: 1rem;
+}
+
+input [type="text"]:focus {
+  border-color: olive;
 }
