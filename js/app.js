@@ -2,7 +2,7 @@
 
 let allLocations = [];
 
-let hours = ['6 a.m', '7 a.m', '8 a.m', '9 a.m', '10 a.m', '11 a.m', '12 p.m', '1 p.m', '2 p.m', '3 p.m', '4 p.m', '5 p.m', '6 p.m', '7 p.m', '8 p.m', 'Total'];
+let hours = ['6 a.m', '7 a.m', '8 a.m', '9 a.m', '10 a.m', '11 a.m', '12 p.m', '1 p.m', '2 p.m', '3 p.m', '4 p.m', '5 p.m', '6 p.m', '7 p.m', 'Total'];
 
 const cookieContainer = document.getElementById('locationNames');
 
@@ -34,21 +34,20 @@ function renderHeader() {
   let thHours = document.createElement('th');
   thHours.textContent = 'Hours';
   tr.appendChild(thHours);
-  let totalHours = 0;
+  // let totalHours = 0;
   for (let i = 0; i < hours.length; i++) {
     let th = document.createElement('th');
     th.textContent = hours[i];
     tr.appendChild(th);
-    let hourlyTotals = 0;
+    //let hourlyTotals = 0;
     for (let j = 0; j < allLocations.length; j++) {
-      hourlyTotals += (allLocations[j].cookiesSoldPerHourArray[i]);
-      totalHours += (allLocations[j].cookiesSoldPerHourArray[i]);
+      //hourlyTotals += (allLocations[j].cookiesSoldPerHourArray[i]);
+      //totalHours += (allLocations[j].cookiesSoldPerHourArray[i]);
     }
-
   }
-  let totalHoursTh = document.createElement('th');
-  //totalHoursTh.textContent = hours;
-  tr.appendChild(totalHoursTh);
+  // let totalHoursTh = document.createElement('th');
+  // totalHoursTh.textContent = hours;
+  // tr.appendChild(totalHoursTh);
 }
 
 Cookie.prototype.renderTable = function () {
@@ -58,7 +57,9 @@ Cookie.prototype.renderTable = function () {
   tdName.textContent = this.name;
   tr.appendChild(tdName);
 
-  for (let i = 0; i < hours.length; i++) {
+  for (let i = 0; i < hours.length -1; i++) {
+    console.log(hours.length);
+    console.log('JSHFKJH!');
     let cookiesThisHour = Math.ceil(this.getRandomCustomers() * this.avg);
     this.cookiesSoldPerHourArray.push(cookiesThisHour);
     this.dailyTotal = this.dailyTotal + cookiesThisHour;
@@ -84,7 +85,7 @@ function renderFooter() {
   tdName.textContent = 'Totals';
   tr.appendChild(tdName);
   let totalTotals = 0;
-  for (let i = 0; i < hours.length; i++) {
+  for (let i = 0; i < hours.length -1; i++) {
     let hourlyTotals = 0;
     for (let j = 0; j < allLocations.length; j++) {
       hourlyTotals += (allLocations[j].cookiesSoldPerHourArray[i]);
@@ -103,6 +104,7 @@ function renderFooter() {
   grandTotalTd.textContent = totalTotals;
   tr.appendChild(grandTotalTd);
 }
+renderHeader();
 
 let seattle = new Cookie(
   'Seattle',
@@ -144,6 +146,5 @@ let lima = new Cookie(
 );
 lima.renderTable();
 
-renderHeader();
 renderFooter();
 

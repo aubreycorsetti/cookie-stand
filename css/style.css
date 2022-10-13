@@ -10,7 +10,6 @@ header nav {
   align-items: flex-start;
   flex-direction: row;
 
-
 }
 
 header nav ul li {
@@ -78,8 +77,10 @@ body h2 {
   border: solid darkgray;
   border-width: 25px;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #8aa192;
 }
-table, th, td {
+section table, th, td {
   border:1px solid black;
   width: 500px;
   height: 30px;
@@ -87,4 +88,18 @@ table, th, td {
   align-items: center;
   margin: auto;
   flex-wrap: wrap;
+}
+
+h3 {
+  color: #f2b3a4;
+  font-family: 'Secular One', sans-serif;
+}
+
+h4 {
+  font-size: 45px;
+  border: solid darkgray;
+  border-width: 25px;
+  text-align: center;
+  color: #bfb4ae;
+  font-family: 'Acme', sans-serif;
 }
