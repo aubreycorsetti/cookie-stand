@@ -60,7 +60,9 @@ main article section {
 
 footer {
   background-color: darkgray;
-  height: 50px;
+  height: 75px;
+  margin-bottom: 0;
+  flex-direction: row-reverse;
 }
 
 div {
