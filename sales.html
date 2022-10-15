@@ -13,10 +13,10 @@
     <nav>
       <img src="https://raw.githubusercontent.com/codefellows/seattle-code-201d91/main/class-08/lab-b/assets/salmon.png" alt="chinook salmon" width="200px" height="70px">
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="sales.html">Sales</a></li>
         <li><a href="locations.html">Locations</a></li>
         <li><a href="contact.html">Contact Information</a></li>
-        <li><a href="index.html">Home</a></li>
       </ul>
     </nav>
   </header>
@@ -29,16 +29,16 @@
         <fieldset>
           <legend>Check your location here!</legend>
           <label>Location
-            <input type="text" name="location">
+            <input type="text" name="location" placeholder="ex: Rome" required>
           </label>
           <label>Min Customers per Hour
-            <input type="number" name="min">
+            <input type="number" name="min" required>
           </label>
           <label>Max Customers per Hour
-            <input type="number" name="max">
+            <input type="number" name="max" required>
           </label>
           <label>Avg Cookies per Customer
-            <input type="number" name="avg">
+            <input type="number" name="avg" required>
           </label>
           <button type="submit">Submit</button>
         </fieldset>

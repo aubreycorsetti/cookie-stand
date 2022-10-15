@@ -48,8 +48,14 @@ main img {
   margin-bottom: 30px;
 }
 
-main article {
+article section {
   width: 450px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+table {
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 
@@ -63,6 +69,21 @@ footer {
   height: 75px;
   margin-bottom: 0;
   flex-direction: row-reverse;
+  color: slategray;
+  text-align: center;
+}
+
+footer img {
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-left: 85%;
+}
+
+table {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  background-color: blanchedalmond;
+  padding-top: 1rem;
 }
 
 div {
@@ -85,7 +106,7 @@ body h2 {
   border-width: 25px;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-  color: darkslategrey;
+  color: grey;
 }
 section table, th, td {
   border:1px solid black;
@@ -150,3 +171,4 @@ input {
 input [type="text"]:focus {
   border-color: olive;
 }
+
